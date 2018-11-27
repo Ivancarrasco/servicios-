@@ -21,7 +21,7 @@ Restaurant.findById(req.params.id)
   .then(restFound => {
     if(!restFound)
     {
-    return res.status(400.end();
+    return res.status(404.end();
     }
     return res.status(200).json(restFound);
   })
@@ -34,7 +34,7 @@ exports.erase = function ( req, res){
     if (err)
     {
       console.log(err);
-      return res.status(400.end();
+      return res.status(404.end();
     }
       return res.status(202).end();
   })
@@ -48,7 +48,7 @@ exports.replace = function (req, res){
     if (err)
     {
       console.log(err);
-      return res.status(400.end();
+      return res.status(404.end();
     }
       return res.status(202).end();
   })
